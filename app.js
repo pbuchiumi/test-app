@@ -1,8 +1,8 @@
+const dataObj = {
+    message: 'Hello Vue',
+    userName: 'Evan'
+};
 
-Vue.createApp({
-    data() {
-         return {
-             message: 'Hello Vue!'
-         };
-     }
- }).mount('#app');
+const app = Vue.createApp({
+    data: () => dataObj
+}).mount('#app');
