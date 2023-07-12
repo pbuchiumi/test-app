@@ -1,8 +1,12 @@
-const dataObj = {
-    message: 'Hello Vue',
-    userName: 'Evan'
-};
-
-const app = Vue.createApp({
-    data: () => dataObj
-}).mount('#app');
+Vue.createApp({
+    data(){
+        return {
+            userName: 'Evan'
+        };
+    },
+methods: {
+    sayHello() {
+        retrun `Hello ${this.userName}!`;
+    }
+}
+}) .mount('#app');
