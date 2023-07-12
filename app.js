@@ -1,12 +1,12 @@
 Vue.createApp({
-    data(){
+    data() { 
         return {
             userName: 'Evan'
         };
     },
-methods: {
-    sayHello() {
-        retrun `Hello ${this.userName}!`;
+    methods: {
+        sayHello() {
+            return `Hello ${this.userName}!`;
+        }
     }
-}
-}) .mount('#app');
+}).mount('#app');
