@@ -1,11 +1,13 @@
+
 app = Vue.createApp({
     data() {
-        return { message: 'Hello Vue!' };
-    },
-    created() {
-        console.log('A Vue instance was created.');
-    },
-    mounted() {
-        console.log('The Vue instance was mounted.');
+        return {
+            colors: ['Red', 'Blue', 'Yellow'], // 単純な配列
+            users: [ // オブジェクト配列
+                { id: 1, name: 'John', age: 19 },
+                { id: 2, name: 'Eric', age: 32 },
+                { id: 3, name: 'Bill', age: 25 },
+            ]
+        };
     }
 }).mount('#app');
