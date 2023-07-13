@@ -8,10 +8,11 @@
     </head>
 <body> 
          
-<div id="app">
-    <h1>{{ message }}</h1>
-    <button @click="changeMessage($event,'OK')">Click Me!</button>
-</div>
+
+    <div id="app">
+        <h1 v-show="visible">{{ message }}</h1>
+        <button @click="toggleVisible">Toggle visible</button>
+    </div>
         <script src="app.js"></script>
     </body>
 </html>

@@ -1,22 +1,14 @@
 
-app = Vue.createApp({
+const app = Vue.createApp({
     data() {
-        return { message: 'Hello Vue!'};
+        return {
+            message: 'Hello Vue!',
+            visible: true
+        }
     },
-    
-methods: {
-    sayGoodbye() {
-        this.message = 'Goodbye Vue!';
-    },
-    changeMessage(event,message) {
-        
-this.message = message;
-    console.log(event.type);
-    console.log(event.target);
-    // すべてのイベント･プロパティを参照
-    // for (let prop in event) {
-    //     console.log(prop + ': ' + event[prop]);
-    // }
-}
-}
+    methods: {
+        toggleVisible() {
+            this.visible = !this.visible;
+        }
+    }
 }).mount('#app');
