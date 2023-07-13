@@ -5,15 +5,21 @@
     <head>
         <meta charset="utf-8">
         <script src="https://unpkg.com/vue@next"></script>
+    <style>
+          .blowup {
+              color: red;
+              font-size: 60pt;
+          }
+    </style>
+
     </head>
 <body> 
-         
 
-    
-<div id="app">
-    <h1 v-if="visible">{{ message }}</h1>
-    <button @click="toggleVisible">Toggle visible</button>
-</div>
+    <div id="app">
+        <h1 :class="{ blowup: isBlowup }">{{ message }}</h1>
+        <img :src="vueLogo" />
+        <button @click="change" v-show="visible">Click Me!</button>
+    </div>
         <script src="app.js"></script>
     </body>
 </html>
