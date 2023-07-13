@@ -1,12 +1,11 @@
-Vue.createApp({
-    data() { 
-        return {
-            userName: 'Evan'
-        };
+app = Vue.createApp({
+    data() {
+        return { message: 'Hello Vue!' };
     },
-    methods: {
-        sayHello() {
-            return `Hello ${this.userName}!`;
-        }
+    created() {
+        console.log('A Vue instance was created.');
+    },
+    mounted() {
+        console.log('The Vue instance was mounted.');
     }
 }).mount('#app');
